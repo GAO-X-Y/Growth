@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+void fun(char* str)
+{
+	char* p = str;
+	int i = 0;
+	while (*p)
+	{
+		if (*p != ' ')
+			str[i++] = *p;
+		p++;
+	}
+	str[i] = '\0';
+}
+int main()
+{
+	char str[81];
+	char Msg[] = "Input a string:";
+	printf(Msg);
+	gets_s(str);
+	puts(str);
+	fun(str);
+	printf("***str:%s!\n", str);
+	return 0;
+}

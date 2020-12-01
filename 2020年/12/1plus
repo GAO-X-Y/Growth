@@ -1,0 +1,34 @@
+#include<stdio.h>
+struct date
+{
+  int year;
+  int mouth;
+  int day;	
+}dates;
+  main()
+{
+  int i,t,s=0,b=0;
+  scanf("%d %d %d",&dates.year,&dates.mouth ,&dates.day );
+  for(i=0;dates.mouth !=0;dates.mouth --,i++)
+   {
+   	if(i%2!=0&&i<9)
+   	b=b+1;
+   	if(i%2==0&&i<8)
+   	s=s+1;
+   	if(i>=9&&i%2!=0)
+   	s=s+1;
+   	if(i>=8&&i%2==0)
+   	b=b+1;
+	 }
+  if(dates.mouth >2)
+  {if(dates.year %400!=0)
+  {if(dates.year%4==0&&dates.year %100!=0)
+    t=b*31+s*30+dates.day -1;
+   else
+    t=b*31+s*30+dates.day-2;}
+   else
+    t=b*31+s*30+dates.day -1;}
+  else
+    t=d*31+s*30+dates.day; 
+	printf("%d",t);  
+}

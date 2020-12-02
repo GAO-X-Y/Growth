@@ -1,0 +1,14 @@
+#include<stdio.h>
+ main()
+ {
+     double m=4/3,n=1.0,pi;
+     int i,j;
+     for(j=1;j<15;j++)
+     {   
+         for(i=1;i<=j;i++)
+         n=n*i/(2.0*i+1);
+         m=m+n;n=1.0;
+     }
+     pi=2*m;
+     printf("%lf",pi);
+ }
